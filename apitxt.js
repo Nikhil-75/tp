@@ -1,6 +1,6 @@
 const http = require("http");
 const fs = require("fs");
-
+//comment
 
 const hostname = "127.0.0.1";
 
@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 
   if (req.method === "GET") {
     res.end("get method");
-    req.on("data", gatdata);
+    req.on("data", getdata);
     return;
 
   }
@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
     res.end("post method ");
     req.on("data",postdata)
     return;
-  }
+  } 
   if (req.method === "PUT") {
     res.end("put method ");
     req.on("data", pushdata);
